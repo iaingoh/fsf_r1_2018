@@ -1,2 +1,11 @@
-<app-search></app-search>
+<h1>Search Giphy</h1>
+
+<app-search (giphySearch)="performSearch($event)"></app-search>
+
+<!--
+<app-single-display *ngFor="let g of giphys" [giphyURL]="g">
+</app-single-display>
+-->
+
+<app-display [giphyURLs]="giphys"></app-display>
 
