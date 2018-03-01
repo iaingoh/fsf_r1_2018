@@ -1,0 +1,29 @@
+<div class="draw-border">
+  <h2>Search</h2>
+  <form #searchForm="ngForm" (ngSubmit)="processForm(searchForm)">
+    <table>
+      <tr>
+        <td>Query:</td>
+        <td>
+          <input type="text" name="query" size="50"
+              placeholder="What would you like to search today?"
+              ngModel>
+        </td>
+      </tr>
+      <tr>
+        <td>Result:</td>
+        <td>
+          <input type="number" name="result" placeholder="Number of results"
+              min="1" max="25"
+              ngModel>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button type="submit">Search</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
