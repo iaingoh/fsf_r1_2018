@@ -1,7 +1,7 @@
 //load express
 const express = require('express');
 
-const IMAGES = [ 'dog.png', 'icon.png', 'placeholder.png' ];
+const IMAGES = ['dog.png', 'icon.png', 'placeholder.png'];
 
 //create an instance of express
 const app = express();
