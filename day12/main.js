@@ -45,15 +45,15 @@ app.use('/operation-hours', (req, resp) => {
 
     if (time < 1200)
         //resp.send('<h2>We are open at 1200</h2>');
-        resp.json({open: false, messsage: 'Open at 1200'})
+        resp.json({ open: false, messsage: 'Open at 1200' })
 
-    else if ((time >= 1200) && (time <= 2200)) 
+    else if ((time >= 1200) && (time <= 2200))
         //resp.send('<h2>We are open!</h2>');
-        resp.json({open: true})
+        resp.json({ open: true })
 
     else
         //resp.send('<h2>We are closed for the day</h2>');
-        resp.json({open: false, message: 'Closed for the day'});
+        resp.json({ open: false, message: 'Closed for the day' });
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
