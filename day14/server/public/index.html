@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1><code>GET and POST</code></h1>
+
+        <h2>GET</h2>
+        <form method="GET" action="/timezone">
+            Name: 
+            <input type="text" name="name" placeholder="Enter your name">
+            <br>
+
+            Timezone: 
+            <input type="text" name="tz" placeholder="Enter the timezone">
+
+            <button type="submit">Get Time</button>
+        </form>
+
+        <br><br>
+
+        <h2>POST</h2>
+        <form method="POST" action="http://localhost:3000/timezone">
+            Name: 
+            <input type="text" name="name" placeholder="Enter your name">
+            <br>
+
+            Timezone: 
+            <input type="text" name="tz" placeholder="Enter the timezone">
+
+            <button type="submit">Get Time</button>
+        </form>
+        
+    </body>
+</html>

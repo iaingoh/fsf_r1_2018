@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>Time: {{ currentTime }}</h1>
+<form #tzForm="ngForm" (ngSubmit)="getTimezone(tzForm)">
+
+  Timezone:
+  <input type="text" name="timezone" ngModel required
+      placeholder="Enter a timezone" size="30">
+
+  <button type="submit" [disabled]="tzForm.invalid">
+    Get Timezone
+  </button>
+
+</form>
