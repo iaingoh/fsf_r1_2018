@@ -1,0 +1,60 @@
+<h1>Shopping Cart</h1>
+
+<form [formGroup]="cart" #cartForm="ngForm">
+
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td>
+        <input type="text" size="30" placeholder="Your name"
+               formControlName="name">
+      </td>
+    </tr>
+    <tr>
+      <td>Item:</td>
+      <td>
+        <input type="text" size="30" placeholder="Item"
+               formControlName="item">
+      </td>
+      <td>
+        <button type="button"
+                (click)="addItem()" [disabled]="!canAdd()">
+          Add
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="button"
+            (click)="loadItem()" [disabled]="!canLoad()">
+          Load
+        </button>
+        <button type="button"
+          (click)="saveItem()" [disabled]="!canLoad() || isEmpty()">
+          Save
+        </button>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+  <h3>Cart Content</h3>
+
+  <div formArrayName="contents">
+    <div *ngFor="let c of cart.get('contents').controls; let i = index"
+         [formGroupName]="i" >
+
+      Item: <input type="text" formControlName="item" [readonly]="update[i]">
+      <button type="button" (click)="deleteField(i)">
+        Delete
+      </button>
+      <button type="button" (click)="updateField(i)">
+        Update
+      </button>
+
+    </div>
+
+  </div>
+
+</form>
