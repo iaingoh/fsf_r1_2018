@@ -1,0 +1,28 @@
+<h1>List of my customers</h1>
+
+<form #customerForm="ngForm" (ngSubmit)="getCustomers(customerForm)">
+  <table>
+    <tr>
+      <td>Offset:</td>
+      <td> <input type="number" min="1" name="offset" ngModel> </td>
+    </tr>
+    <tr>
+      <td>Limit:</td>
+      <td> <input type="number" min="1" name="limit" ngModel> </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="submit">Get</button>
+      </td>
+    </tr>
+  </table>
+
+</form>
+
+<ul>
+  <li *ngFor="let c of customers">
+    name: {{ c.NAME }}, email: {{ c.EMAIL }}
+  </li>
+
+</ul>
