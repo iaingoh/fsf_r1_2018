@@ -1,0 +1,45 @@
+<table>
+  <tr>
+    <td></td>
+    <td>
+      <button type="button" (click)="prev()">
+        Prev
+      </button>
+      <button type="button" (click)="next()">
+        Next
+      </button>
+    </td>
+  </tr>
+  <tr>
+    <td>Title:</td>
+    <td>{{ film['title']}}</td>
+  </tr>
+  <tr>
+    <td>Description:</td>
+    <td>{{ film['description']}}</td>
+  </tr>
+  <tr>
+    <td>Duration:</td>
+    <td>{{ film['length']}} mins</td>
+  </tr>
+  <tr>
+    <td>Release year:</td>
+    <td>{{ film['release_year']}}</td>
+  </tr>
+  <tr>
+    <td>Ratings:</td>
+    <td>{{ film['rating']}}</td>
+  </tr>
+  <tr>
+    <td>Special features:</td>
+    <td>{{ film['special_features']}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <button type="button" (click)="goBack()">
+        Back
+      </button>
+    </td>
+  </tr>
+</table>

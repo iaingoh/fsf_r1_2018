@@ -1,0 +1,19 @@
+<div style="margin: 20px">
+
+  <button type="button" (click)="prev()" [disabled]="offset <= 0">
+    Prev
+  </button>
+  <button type="button" (click)="next()">
+    Next
+  </button>
+
+</div>
+<div *ngFor="let f of films" style="padding: 5px;">
+  <a [routerLink]="[ '/film', f.film_id ]">
+    <h4 style="display: inline;">{{ f.title }}
+    </h4>
+  </a>
+  <button type="button" (click)="showDetails(f.film_id)">
+    Show
+  </button>
+</div>
